@@ -24,6 +24,11 @@ gem "twitter-bootstrap-rails"
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
+end
 # bundle exec rake doc:rails generates the API under doc/api.
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
