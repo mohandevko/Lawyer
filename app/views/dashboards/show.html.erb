@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>Lawyer Name:</td>
+    <td><%= @lawyer.lawyer_name %></td>
+  </tr>
+  <tr>
+    <td>Lawyer Code:</td>
+    <td><%= @lawyer.lawyer_code %></td>
+  </tr>
+  <tr>
+    <td>Location:</td>
+    <td><%= @lawyer.city %></td>
+  </tr>
+</table>
+<h3>Services</h3>
+<table width="100%" border="1" style="text-align: center;">
+  <tr>
+    <th>Service Code</th>
+    <th>Service Name</th>
+    <th>Price</th>
+  </tr>
+  <% for lawyer in @services %>
+    <tr>
+      <td><%= lawyer.service_code %> </td>
+      <td><%= lawyer.service_name %> </td>
+      <td><%= lawyer.price %></td>
+    </tr>
+  <% end %>
+</table>

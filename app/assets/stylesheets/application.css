@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+#ajax_loader_big{
+    display:none;
+    height:auto;
+    left:50%;
+    position:fixed;
+    top:35%;
+    z-index:4;
+}
+#ajax_loader_big_div{
+    display:none;
+    height:auto;
+    left:50%;
+    position:fixed;
+    top:35%;
+    z-index:4;
+}
+
+#error_explanation{
+    color: red;
+}
+
+#error_explanation {
+  width: 450px;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+}
+  
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+

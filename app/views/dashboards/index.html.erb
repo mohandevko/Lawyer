@@ -1,0 +1,5 @@
+<h3>Search Laywer</h3>
+<%= form_tag search_dashboards_path, :method => :get do %>
+  <%= select_tag :location, options_for_select([["Location",""]]+Lawyer.select("DISTINCT city").all.map{|a| a.city}) %>
+  <%= submit_tag "Find", :class => 'btn' %>
+<% end %>

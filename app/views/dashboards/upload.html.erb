@@ -1,0 +1,13 @@
+Upload Laywer
+<%= form_tag upload_lawyer_path, :multipart => true, :method => :post do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload" %>
+<% end %>
+
+
+
+Upload Laywer Service
+<%= form_tag upload_service_path, :multipart => true, :method => :post do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload" %>
+<% end %>

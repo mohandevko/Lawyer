@@ -1,0 +1,21 @@
+<h3>Results</h3>
+<table width="100%" border="1" style="text-align: center;">
+  <tr>
+    <th>Lawyer Code</th>
+    <th>Lawyer Name</th>
+    <th>No of Exp.</th>
+    <th>Rating</th>
+    <th>Location</th>
+    <th>Services</th>
+  </tr>
+  <% for lawyer in @lawyers %>
+    <tr>
+      <td><%= lawyer.lawyer_code %> </td>
+      <td><%= link_to lawyer.lawyer_name, dashboard_path(lawyer) %> </td>
+      <td><%= lawyer.years_of_experiance %> </td>
+      <td><%= lawyer.rating %> </td>
+      <td><%= lawyer.city %></td>
+      <td><%= LawyerService.where("lawyer_code = '#{lawyer.lawyer_code}'").count %> </td>
+    </tr>
+  <% end %>
+</table>
