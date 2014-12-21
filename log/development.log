@@ -6116,3 +6116,18 @@ Processing by DashboardsController#search as HTML
   [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L7')
   Rendered dashboards/search.html.erb within layouts/application (145.6ms)
 Completed 200 OK in 152ms (Views: 32.0ms | ActiveRecord: 118.7ms)
+
+
+Started GET "/dashboards/search?utf8=%E2%9C%93&location=+Chennai&commit=Find" for 127.0.0.1 at 2014-12-21 09:07:43 +0530
+Processing by DashboardsController#search as HTML
+  Parameters: {"utf8"=>"✓", "location"=>" Chennai", "commit"=>"Find"}
+  [1m[36mLawyer Load (1.1ms)[0m  [1mSELECT `lawyers`.* FROM `lawyers`  WHERE (city = ' Chennai')  ORDER BY `lawyers`.`lawyer_name` ASC[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L8')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L1')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L46')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L44')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L45')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L6')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `lawyer_services`  WHERE (lawyer_code = 'L7')
+  Rendered dashboards/search.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 27ms (Views: 20.5ms | ActiveRecord: 5.6ms)
