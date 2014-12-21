@@ -26,7 +26,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 group :production do
-  gem 'therubyracer-heroku' # you will need this too
   gem 'pg'
 end
 # bundle exec rake doc:rails generates the API under doc/api.
