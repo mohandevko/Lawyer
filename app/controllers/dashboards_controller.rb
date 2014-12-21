@@ -11,11 +11,11 @@ class DashboardsController < ApplicationController
   
   def show
     @lawyer = Lawyer.find(params[:id])
-    @services = LawyerService.where("lawyer_code = '#{@lawyer.lawyer_code}'")
+    @services = LawyerService.where("lawyer_code = '#{@lawyer.lawyer_code}'").order(:service_name)
   end
   
   def search
-    @lawyers = Lawyer.where("city = '#{params[:location]}'")
+    @lawyers = Lawyer.where("city = '#{params[:location]}'").order(:lawyer_name)
   end
 
   def upload_lawyer
